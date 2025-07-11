@@ -38,7 +38,7 @@ Displayes a big timer in the bottom left corner on the Jira page.
 
 1. Clone this repository with `git clone https://github.com/trueberryless/jira-timer-extension`
 2. Go to `manifest.json` and adapt the `host_permissions` and `content_scripts[].matches` to your companies Jira domain.
-3. Go to [chrome://extensions/](chrome://extensions/) in a Chromium-based browser
+3. Go to `chrome://extensions/` in a Chromium-based browser
 4. Enable `Developer Mode` in the top right corner
 5. Click `Load unpacked` and choose the local files you cloned in step one (root directory of this repo).
 6. Enjoy 🥳
