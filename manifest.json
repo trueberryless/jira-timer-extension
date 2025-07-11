@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Jira Speaking Timer",
+  "version": "1.0",
+  "description": "Tracks speaking time when Jira Quick Filters change.",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": ["https://your.company.jira.domain/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://your.company.jira.domain/*"],
+      "js": ["content.js"],
+      "css": ["timer.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
