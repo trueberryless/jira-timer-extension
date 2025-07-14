@@ -48,6 +48,9 @@ circle.timer-path {
 
 /* Minimize button */
 #jira-timer-minimize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
@@ -55,7 +58,6 @@ circle.timer-path {
   color: white;
   border: none;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
