@@ -7,8 +7,12 @@ function createTimerUI() {
 
   const container = document.createElement("div");
   container.id = "jira-timer-container";
+
   container.innerHTML = `
     <div class="timer-ring">
+      <button id="jira-timer-minimize" aria-label="Minimize">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#e3e3e3"><path d="M440-440v240h-80v-160H200v-80h240Zm160-320v160h160v80H520v-240h80Z"/></svg>
+      </button>
       <svg viewBox="0 0 400 400">
         <circle r="180" cx="200" cy="200" fill="none" stroke="#333" stroke-width="20" />
         <circle class="timer-path" r="180" cx="200" cy="200" fill="none" stroke="lightskyblue" stroke-width="20" stroke-linecap="round" stroke-dasharray="1130" stroke-dashoffset="0" />
@@ -16,7 +20,26 @@ function createTimerUI() {
       <div id="jira-timer-display">--:--</div>
     </div>
   `;
+
   document.body.appendChild(container);
+  
+  // Create restore button
+  const restoreButton = document.createElement("button");
+  restoreButton.id = "jira-timer-restore";
+  restoreButton.textContent = "Timer";
+  document.body.appendChild(restoreButton);
+
+  // Minimize event
+  document.getElementById("jira-timer-minimize").addEventListener("click", () => {
+    container.style.display = "none";
+    restoreButton.style.display = "block";
+  });
+
+  // Restore event
+  restoreButton.addEventListener("click", () => {
+    container.style.display = "flex";
+    restoreButton.style.display = "none";
+  });
 }
 
 function startTimer() {
