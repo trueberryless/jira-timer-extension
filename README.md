@@ -9,6 +9,7 @@
 - 🕒 **Big Clock** - Visible for all participants in Dailys / Standups (Agile Project Management)
 - 🔵 **Circular Visualiser** - Get a better feeling for how much timer is left
 - ⭕ **Red Stopwatch** - Count the time back up after it ran out with red warnings
+- 🤏 **Minimize Timer** - Whenever the timer is in your way, just hit the minimize button and it counts down in the background
 
 ## 📚 Resources
 
