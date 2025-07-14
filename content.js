@@ -10,7 +10,9 @@ function createTimerUI() {
 
   container.innerHTML = `
     <div class="timer-ring">
-      <button id="jira-timer-minimize">Minimize</button>
+      <button id="jira-timer-minimize" aria-label="Minimize">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#e3e3e3"><path d="M440-440v240h-80v-160H200v-80h240Zm160-320v160h160v80H520v-240h80Z"/></svg>
+      </button>
       <svg viewBox="0 0 400 400">
         <circle r="180" cx="200" cy="200" fill="none" stroke="#333" stroke-width="20" />
         <circle class="timer-path" r="180" cx="200" cy="200" fill="none" stroke="lightskyblue" stroke-width="20" stroke-linecap="round" stroke-dasharray="1130" stroke-dashoffset="0" />
