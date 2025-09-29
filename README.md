@@ -2,7 +2,10 @@
 
 > **Add a timer to the Jira Kanban board which resets whenever the Quick Filters change** - This is a Chrome Extension
 
-![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green?logo=googlechrome&logoColor=green)
+<p>
+  <a href="https://chromewebstore.google.com/detail/<TODO>"><img src="https://img.shields.io/badge/Chrome_Web_Store-b7bdf8?style=for-the-badge&logo=GoogleChrome&logoColor=24273a"></a>
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/jira-timer-extension/"><img src="https://img.shields.io/badge/Firefox_Add--ons-f5a97f?style=for-the-badge&logo=Firefox-Browser&logoColor=24273a"></a>
+</p>
 
 ## ✨ Features
 
@@ -11,38 +14,28 @@
 - ⭕ **Red Stopwatch** - Count the time back up after it ran out with red warnings
 - 🤏 **Minimize Timer** - Whenever the timer is in your way, just hit the minimize button and it counts down in the background
 
-## 📚 Resources
+## 🚀 Development
 
-- 📖 [**Load unpacked extensions**](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) - Complete setup guide
+### Directory Structure
 
-## ⚙️ Configuration
+| Folder | Description |
+|---|---|
+| `entrypoints/content.ts` | Logic for displaying timer on Jira websites. |
+| `entrypoints/style.css` | CSS styles for the displayed timer. |
+| `entrypoints/options.ts` | Logic for updating the domains configured by the user to local storage. |
+| `entrypoints/options.html` | Website where the user can change and configure the domains where this extension should be active. |
+| `entrypoints/background.ts` | Logic for updating the `content.ts` script with the correct domains. |
+| `public/icon/` | Extension icon in different sizes. | <TODO>
 
-You can search for those terms to adjust settings for your needs:
+### Scripts
 
-| Terms          | Description                                                                                    | Default        |
-| -------------- | ---------------------------------------------------------------------------------------------- | -------------- |
-| `totalSeconds` | The total time every speacker should be allowed to speak before the stopwatch starts           | `90`           |
-| `lightskyblue` | Adjust the default color for the circular surroundings (2x in `content.js`, 1x in `timer.css`) | `lightskyblue` |
-| `red`          | Default color for the warning circular surroundings (1x in `content.js`, 1x in `timer.css`)    | `red`          |
+The following package.json scripts are available for your convenience:
 
-Take a closer look in the `timer.css` to adjust:
-
-- `width` and `height` of the clock (default: `30rem`)
-- positioning with `top`, `right`, `bottom` or/and `left` respectfully
-- `border-radius`, and so on...
-
-## 📤 Outputs
-
-Displayes a big timer in the bottom left corner on the Jira page.
-
-## 🚀 Quick Start
-
-1. Clone this repository with `git clone https://github.com/trueberryless/jira-timer-extension`
-2. Go to `manifest.json` and adapt the `host_permissions` and `content_scripts[].matches` to your companies Jira domain.
-3. Go to `chrome://extensions/` in a Chromium-based browser
-4. Enable `Developer Mode` in the top right corner
-5. Click `Load unpacked` and choose the local files you cloned in step one (root directory of this repo).
-6. Enjoy 🥳
+| Script | Description |
+|---|---|
+| `dev` | Launch a Chrome instance with the extension installed and hot reloading enabled. Use `dev:firefox` to launch a Firefox instance instead. |
+| `build` | Build the Chrome extension to `dist/`. Use `build:firefox` to build the Firefox version instead. |
+| `zip` | Build and zip the Chrome extension. Use `zip:firefox` to build and zip the Firefox version instead. |
 
 <div align="center">
 
