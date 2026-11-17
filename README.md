@@ -46,6 +46,6 @@ Displayes a big timer in the bottom left corner on the Jira page.
 
 <div align="center">
 
-**Made with ❤️ by [@trueberryless](https://trueberryless.org)**
+**Made with ❤️ by [@trueberryless](https://felixs.dev)**
 
 </div>
